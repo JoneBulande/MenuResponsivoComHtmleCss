@@ -1,49 +1,57 @@
 *{
 	margin: 0;
 	padding: 0;
+	outline: none;
 	font-family: sans-serif;
+}
+
+ul{
+	list-style: none;
+}
+a{
+	color: #000;
+	text-decoration: none;
+}
+.menu{
+	width: 40px;
 }
 .header{
 	color: #fff;
-	height: 100px;
-	padding: 0 20px;
-	background-color: #34495e;
-}
-.logo{
-	float: left;
-	line-height: 100px;
-	text-transform: uppercase;
-}
-.menu{
-	float: right;
-	line-height: 100px;
-}
-.menu a{
-	color: #fff;
-	padding: 0 10px;
-	text-decoration: none;
-	text-transform: uppercase;
-}
-.show-menu-btn, .hide-menu-btn{
-	display: none;
-	font-size: 30px;
-	cursor: pointer;
-	transition: 0.4s;
-}
-.show-menu-btn{
-	float: right;
-}
-.show-menu-btn i{
-	line-height: 100px;
-}
-.menu a:hover,
-.show-menu-btn:hover,
-.hide-menu-btn:hover{
-	color: #3498db;
+	background-color: #124;
 }
 
-#chk{
+input[type="checkbox"]{
+	display: none;
+}
+input[type="checkbox"]:checked ~ nav{
+	transform: translateX(350px);
+}
+nav{
+	left: -350px;
+	width: 350px;
+	height: 100vh;
 	position: absolute;
-	visibility: hidden;
-	z-index: -1111;
+	transition: all .5s;
+	background-color: #124;
+}
+ul{
+	top: 70px;
+	width: 100%;
+	position: absolute;
+}
+nav a{
+	color: #fff;
+	padding: 10px;
+	display: block;
+	transition: 0.5s;
+	
+}
+nav a:hover{
+	background-color: #1d325b;
+}
+
+label{
+	z-index: 1;
+	padding: 15px;
+	position: absolute;
 }
